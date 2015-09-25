@@ -3,11 +3,11 @@ Ignore this file.
 
 It's just part of the testing script.
 
-This doesn't do nothing.
+This doesn't do nothing that you might want. :P
 """
 
 def hook_command(name, function, help):
-    function[help.split(" "), [help, help.split(" ")[1]], None]
+    function(help.split(" "), [help, help.split(" ")[1]], None)
     
 def command(command):
     split = command.split(" ")
