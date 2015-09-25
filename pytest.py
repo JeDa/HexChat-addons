@@ -17,8 +17,8 @@ if __name__ == "__main__":
             print("{0} = BROKEN".format(val))
             broken[val] = 1
     broke = 0
-    for i, val in broken:
-        if val == 1:
+    for i in broken:
+        if i == 1:
             broke = 1
     if broke == 1:
         print("There's broken addons. :(")
