@@ -10,9 +10,9 @@ __module_description__ = "Generates rainbow-colored versions of the text you ent
 def TheRainbow(word, raintype):
 	colorlist = ["\x034","\x037","\x038","\x039","\x0311","\x0312","\x0313","\x036","\x034"]
 	rainbowed = ""
-	if raintype = "chan":
+	if raintype == "chan":
 	    split_text = list(" ".join(word).replace(word[0] + " ", ""))
-	elif raintype = "privmsg":
+	elif raintype == "privmsg":
 	    split_text = list(" ".join(word).replace(word[0] + " " + word[1] + " ", ""))
 	for i in split_text:
 	    rainbowed += random.choice(colorlist) + i
