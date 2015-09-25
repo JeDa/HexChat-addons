@@ -5,7 +5,7 @@ import random
 __module_name__ = 'Slap'
 __module_version__ = '1.0.0'
 __module_description__ = 'Slaps people.'
-__module_author__ = 'JeDa (based off Douglas Brunal (AKA) Frankity's code)'
+__module_author__ = 'JeDa (based off Douglas Brunal (AKA) Frankity\'s code)'
 
 def slap_cb(word, word_eol, userdata):
   actions = ["slaps", "whacks", "ˢᵉʳᶦᵒᵘˢ ᵗʳᵒᵘᵇᶫᵉs", "eats", "Timsons", "13r12a11i10n9b8o7w ᵗʳᵒᵘᵇᶫᵉs"]
