@@ -9,15 +9,17 @@ if __name__ == "__main__":
     import sys
     broken = 0
     for val in os.listdir("addons"):
+        print("{0} = TESTING".format(val))
         try:
             __import__('addons.{0}'.format(val), globals={"__name__": __name__})
             print("{0} = WORKING".format(val))
-        except:
+        except Exception as err:
             print("{0} = BROKEN".format(val))
+            print(err)
             broken = 1
     if broken == 1:
-        print("There's broken addons. :(")
+        print("\nThere's broken addons. :(")
         sys.exit(1)
     else:
-        print("All is fine. :)")
+        print("\nAll is fine. :)")
         sys.exit(0)
