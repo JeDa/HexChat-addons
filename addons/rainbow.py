@@ -4,18 +4,18 @@ import random
 
 __module_name__ = "Rainbow"
 __module_author__ = "JeDa"
-__module_version__ = "1.0.1"
+__module_version__ = "1.0.2b"
 __module_description__ = "Generates rainbow-colored versions of the text you enter."
 
 def TheRainbow(word, raintype):
 	colorlist = ["\x034","\x037","\x038","\x039","\x0311","\x0312","\x0313","\x036","\x034"]
 	rainbowed = ""
 	if raintype == "chan":
-	    split_text = list(" ".join(word).replace(word[0] + " ", ""))
+	    text = " ".join(word).replace(word[0] + " ", "").encode("utf-8")
 	elif raintype == "privmsg":
-	    split_text = list(" ".join(word).replace(word[0] + " " + word[1] + " ", ""))
-	for i in split_text:
-	    rainbowed += random.choice(colorlist) + i
+	    text = " ".join(word).replace(word[0] + " " + word[1] + " ", "").encode("utf-8")
+	for letter in text:
+	    rainbowed += random.choice(colorlist) + letter
 	return rainbowed
 
 def rainbow(word,word_eol,userdata):
