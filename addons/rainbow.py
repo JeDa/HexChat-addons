@@ -11,9 +11,9 @@ def TheRainbow(word, raintype):
 	colorlist = ["\x034","\x037","\x038","\x039","\x0311","\x0312","\x0313","\x036","\x034"]
 	rainbowed = ""
 	if raintype == "chan":
-	    text = str(" ".join(word).replace(word[0] + " ", "")).encode("utf-8")
+	    text = str(" ".join(word).replace(word[0] + " ", ""))
 	elif raintype == "privmsg":
-	    text = str(" ".join(word).replace(word[0] + " " + word[1] + " ", "")).encode("utf-8")
+	    text = str(" ".join(word).replace(word[0] + " " + word[1] + " ", ""))
 	for letter in text:
 	    rainbowed += random.choice(colorlist) + letter
 	return rainbowed
