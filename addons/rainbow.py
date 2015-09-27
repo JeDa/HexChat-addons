@@ -14,11 +14,11 @@ def TheRainbow(word, raintype):
 		word.remove(word[0])
 		text = unicode(" ".join(word), "utf8")
 	elif raintype == "privmsg":
-    	word.remove(word[0])
-    	word.remove(word[0])
-	    text = unicode(" ".join(word), "utf8")
+    		word.remove(word[0])
+    		word.remove(word[0])
+	    	text = unicode(" ".join(word), "utf8")
 	for letter in text:
-	    rainbowed += random.choice(colorlist) + letter
+	    	rainbowed += random.choice(colorlist) + letter
 	return rainbowed.encode("utf8", "replace")
 
 def rainbow(word,word_eol,userdata):
