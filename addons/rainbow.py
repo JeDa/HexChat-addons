@@ -22,16 +22,16 @@ def TheRainbow(word, raintype):
 	return rainbowed.encode("utf8", "replace")
 
 def rainbow(word,word_eol,userdata):
-	hexchat.command("say " + TheRainbow(word, "chan"))
+		hexchat.command("say " + TheRainbow(word, "chan"))
 
 def rainbowme(word,word_eol,userdata):
-	hexchat.command("me " + TheRainbow(word, "chan"))
+		hexchat.command("me " + TheRainbow(word, "chan"))
 
 def rainbowmsg(word,word_eol,userdata):
-	hexchat.command("msg " + word[1] + " " + TheRainbow(word, "privmsg"))
+		hexchat.command("msg " + word[1] + " " + TheRainbow(word, "privmsg"))
 
 def rainbownotice(word,word_eol,userdata):
-	hexchat.command("notice " + word[1] + " " + TheRainbow(word, "privmsg"))
+		hexchat.command("notice " + word[1] + " " + TheRainbow(word, "privmsg"))
 
 hexchat.hook_command("r", rainbow, help="/r (text)")
 hexchat.hook_command("rme", rainbowme, help="/rme (text)")
