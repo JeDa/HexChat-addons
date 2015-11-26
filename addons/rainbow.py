@@ -12,14 +12,14 @@ def TheRainbow(word, raintype):
 	rainbowed = ""
 	if raintype == "chan":
 		word.remove(word[0])
-		text = unicode(" ".join(word), "utf8")
+		text = str(" ".join(word), "utf-8")
 	elif raintype == "privmsg":
     		word.remove(word[0])
     		word.remove(word[0])
-	    	text = unicode(" ".join(word), "utf8")
+	    	text = str(" ".join(word), "utf-8")
 	for letter in text:
 	    	rainbowed += random.choice(colorlist) + letter
-	return rainbowed.encode("utf8", "replace")
+	return rainbowed.encode("utf-8", "replace")
 
 def rainbow(word,word_eol,userdata):
 		hexchat.command("say " + TheRainbow(word, "chan"))
