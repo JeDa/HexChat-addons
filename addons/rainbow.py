@@ -19,7 +19,7 @@ def TheRainbow(word, raintype):
 	    	text = " ".join(word)
 	for letter in text:
 	    	rainbowed += random.choice(colorlist) + letter
-	return rainbowed.encode("utf-8")
+	return rainbowed
 
 def rainbow(word,word_eol,userdata):
 		hexchat.command("say " + TheRainbow(word, "chan"))
