@@ -17,8 +17,8 @@ def TheRainbow(word, raintype):
     		word.remove(word[0])
     		word.remove(word[0])
 	    	text = " ".join(word)
-	for letter in text:
-	    	rainbowed += random.choice(colorlist) + letter
+	for letter in list(text):
+	    	rainbowed += random.choice(colorlist) + str(letter) # just being sure (?)
 	return rainbowed
 
 def rainbow(word,word_eol,userdata):
