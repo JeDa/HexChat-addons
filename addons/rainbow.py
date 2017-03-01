@@ -4,11 +4,11 @@ import random
 
 __module_name__ = "Rainbow"
 __module_author__ = "JeDa"
-__module_version__ = "1.0.2b"
+__module_version__ = "1.0.2"
 __module_description__ = "Generates rainbow-colored versions of the text you enter."
 
 def TheRainbow(word, raintype):
-	colorlist = ["\x034","\x037","\x038","\x039","\x0311","\x0312","\x0313","\x036","\x034"]
+	colorlist = ["\x0304","\x0307","\x0308","\x0309","\x0311","\x0312","\x0313","\x0306","\x0304"]
 	rainbowed = ""
 	if raintype == "chan":
 		word.remove(word[0])
